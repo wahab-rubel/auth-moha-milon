@@ -4,7 +4,7 @@ import { AuthContext } from '../../Providers/AuthProviders';
 
 
 function Register() {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const { createUser } = useContext(AuthContext)
 
  const handleRegister = e =>{
@@ -19,7 +19,7 @@ function Register() {
   .then(result =>{
     console.log(result)
     e.target.reset();
-    Navigate('/')
+    navigate('/')
   })
   .catch(error =>{
     console.log("ERROR", error.message)
